@@ -1,0 +1,37 @@
+#!/bin/bash
+# author: nhd
+source configuration
+# Compute the average retTime for each kind of input
+
+# Absolute paths are required
+#path_in="/home/nhd/hiwi/lab_machine/2016-11-20"
+#path_out="/home/nhd/hiwi/repository/results/obs/2016-11-24/"
+
+mode=1
+
+#1000 samples
+begin=1
+end=1000
+
+
+
+echo "|-----------------------|"
+echo -e "|\tCOMPUTE OBS\t|"
+echo "|-----------------------|"
+#compile the client source code 
+#javac ./de.tud.mais.hiwi.client/src/client/*.java
+
+# We assume the directory hierachy is already created
+#mkdir "$path_out"sc_cc
+#mkdir "$path_out"sc_ci
+
+# $1: path_in
+# $2: path_out
+java -cp ./de.tud.mais.hiwi.client/src client.SSDetector \
+			$measurements $normalizationWindowSize $smoothingWindowSize $outlierFactor $sdWindowSize \
+			$sdOutlierThreshold $steadyMeasurements $1 $2 $mode $3 $4
+
+
+
+
+

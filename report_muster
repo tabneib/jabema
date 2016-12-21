@@ -1,0 +1,56 @@
+
+	+ We consider only the SC-CC case
+		Number of samples: 	SAMPLES
+		Number of measurements:	MEASUREMENTS
+		Measurements in the steady state used for computing the average retTime: SteadyMEASUREMENT
+		
+	
+	+ Content of the directories:
+		./retTimes
+			Each file stores the average retTime in the steady state of each sample.
+
+		./plots/retTime
+			Plot of (normalized) retTime of the first 30 samples. The Steady state is highlighted.
+			In this plot we can clearly see the accuracy of the determining technique whose parameters were carefully adjusted.
+	
+		./plots/retTime_raw
+			Plot of the raw observed retTime of the first 30 samples.
+
+		./plots/other
+			Plots of the intermediate data that is computed during applying the technique for determining
+			the steady state. Here we also plot the first 30 samples.
+
+	 	./capacity
+			Plots and results of the estimation of timing side channel capacity.
+
+	+ Estimated Capacities (bits):
+
+		
+		Correct - Longest	
+		
+		Correct - Middle	
+
+		Correct - Shortest	
+
+
+		Longest - Middle	
+
+		Longest - Shortest	
+	
+		
+		Middle - Shortest	
+
+
+
+	+ Mean running time (ns):
+		
+				Time		Error
+
+		Correct			
+	
+		Longest			
+
+		Middle				
+			
+		Shortest			
+
