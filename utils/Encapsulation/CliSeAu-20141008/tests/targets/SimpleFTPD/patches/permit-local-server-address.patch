@@ -1,0 +1,15 @@
+diff --git a/src/rath/tools/ftp/PassiveConnection.java b/src/rath/tools/ftp/PassiveConnection.java
+index 203a3cc..154d799 100644
+--- a/src/rath/tools/ftp/PassiveConnection.java
++++ b/src/rath/tools/ftp/PassiveConnection.java
+@@ -17,8 +17,8 @@ class PassiveConnection extends DataConnection
+ 	PassiveConnection() throws IOException
+ 	{
+ 		InetAddress local = InetAddress.getLocalHost();	
+-		if( local.isLoopbackAddress() )
+-			throw new IOException("Can't take local ip address");
++		/*if( local.isLoopbackAddress() )
++			throw new IOException("Can't take local ip address"); */
+ 
+ 		ServerSocket sock = new ServerSocket();	
+ 		int okPort = -1;

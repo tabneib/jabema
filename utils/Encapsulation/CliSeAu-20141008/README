@@ -1,0 +1,127 @@
+CliSeAu
+========
+
+This file belongs to the code and documentation of CliSeAu.
+Here you find only the basic information about the package.
+See below about where to find further information.
+
+
+Quick Setup (Linux)
+------------------------
+
+The following instructions assume that you obtained a file
+ - CliSeAu-<date>.tar.gz
+
+Run the following commands in bash:
+  export CLISEAU=CliSeAu-<date>
+  tar -xvzf $CLISEAU.tar.gz
+  # install AspectJ
+  # - download 'aspectj-<version>.jar' (from http://www.eclipse.org/aspectj/downloads.php)
+  # - run 'java -jar aspectj-<version>.jar'
+  # - follow the instruction of the GUI,
+  #   specifying '$CLISEAU/libs/aspectj1.6' as the installation path
+  #   (if you like to install AspectJ elsewhere, it also suffices to
+  #    afterwards place a symbolic link in $CLISEAU/libs)
+  cd $CLISEAU
+  ant
+
+Existing test targets and policies can now be used to see CliSeAu
+implementation in action. For instructions on the tests, check
+
+  tests/targets/SimpleFTPD/README
+  tests/targets/AnomicFTPD/README
+
+
+Contents and Directories
+------------------------
+
+ * config/paths.cfg
+
+   A central configuration file for paths and libraries.
+
+ * data/
+
+   Contains auxiliary files for CliSeAu's composer. Currently, these
+   are templates from which Java source files and AspectJ aspects are generated.
+
+ * doc/
+
+   Architecture and source code documentation.
+
+ * src/
+
+   Source code of the implementation
+
+   * net/cliseau/
+
+     This directory contains the main code files.
+
+     * composer/
+
+       Code for creating instantiations of CliSeAu.
+
+     * lib/enforcer/
+
+       Library of common enforcers for Java programs.
+
+     * runtime/
+
+       Code for Coordinator and Local Policy implementations in Java.
+       Code for Interceptor and Enforcer for Java target nodes.
+       Code for synchronization (currently, this is only the barrier
+       implementation for the startup of CliSeAu instantiations).
+
+     * utils/
+
+       Miscellaneous smaller code parts.
+
+   * test/cliseau/
+
+     Code for testing the implementation
+
+     * junit/
+
+       Tests of the implementation, to be run by 'junit'.
+
+     * inst/
+
+       A simple CliSeAu instantiation for Java in order to test the
+       code.
+
+ * tests/
+
+   This directory contains larger tests. See the README files contained in
+   the subdirectories for more information on the tests.
+
+
+Documentation
+-------------
+
+CliSeAu comes with a basic manual (doc/Manual.pdf)
+
+The source code documentation can be generated from the source files using
+Doxygen or javadoc. Do build this documentation, run
+ - 'ant doc'     (for javadoc)
+ - 'ant doxygen' (for doxygen)
+
+
+Prerequisites
+-------------
+
+The following programs are or might be required to get the code running.
+The list shows also the versions and tools that the compilation has been
+tested with.
+ - java           icedtea 6.1.10.4
+ - ant            1.8.1
+ - doxygen        1.7.3
+   * graphviz     2.26.3
+ - javacc         4.0
+ - junit          4.6
+ - stringtemplate 3.2
+ - log4j          1.2.16
+ - antlr          2.7.7
+ - commons-io     2.0.1
+ - commons-lang   2.6
+ - AspectJ        1.6.12
+
+ - webfs          1.21 (for the DRS example)

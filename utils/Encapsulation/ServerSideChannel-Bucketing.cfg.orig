@@ -1,0 +1,29 @@
+# General configuration
+# The number of units listed below should be the same as configured below as "numberOfUnits"
+#cfg.units   = id-1, 
+cfg.units   = id-1
+#cfg.units   = id-1, id-2, id-3, id-4, id-5, id-6, id-7, id-8, id-9, id-10
+#cfg.destdir = /tmp/server-sidechannel
+cfg.destdir = /home/nhd/hiwi/repository/encap-server
+
+# Default unit configuration
+unit.type                 = Java
+unit.target               = target/server-sidechannel.jar
+unit.target-javavm        = /usr/bin/java
+unit.pointcuts            = target/server-sidechannel.pc
+unit.policy               = bucketing.Bucketing
+unit.policy.numberOfUnits = 1
+unit.event-factory        = bucketing.BucketingEventFactory
+unit.enforcer-factory     = bucketing.BucketingEnforcerFactory
+#unit.inline-classpath     = /home/nhd/hiwi/repository/Server-SideChannel/server-sidechannel-Bucketing.jar:std-enforcers:log4j:jansi
+unit.inline-classpath     = /home/nhd/hiwi/repository/Server-SideChannel/server-sidechannel-Bucketing.jar:std-enforcers:jansi
+
+#unit.policy-classpath     = /home/nhd/hiwi/repository/Server-SideChannel/server-sidechannel-Bucketing.jar:log4j
+unit.policy-classpath     = /home/nhd/hiwi/repository/Server-SideChannel/server-sidechannel-Bucketing.jar
+#unit.loglevel            = INFO
+unit.loglevel             = INFO
+
+# NOTE:
+# This configuration file does not include any connectivity configuration.
+# For connectivity configurations, check the "network-*.cfg" files in the
+# very same directory.

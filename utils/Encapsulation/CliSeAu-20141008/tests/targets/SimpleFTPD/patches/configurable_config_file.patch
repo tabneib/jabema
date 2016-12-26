@@ -1,0 +1,53 @@
+From 1ca365d6d780e05e8b5bfa48b167a14c38ef86df Mon Sep 17 00:00:00 2001
+From: Richard Gay <gay@mais.informatik.tu-darmstadt.de>
+Date: Tue, 22 May 2012 15:18:00 +0200
+Subject: [PATCH] Configurable config file
+
+---
+ src/rath/tools/ftp/ServerMain.java |   15 +++++++++++----
+ 1 files changed, 11 insertions(+), 4 deletions(-)
+
+diff --git a/src/rath/tools/ftp/ServerMain.java b/src/rath/tools/ftp/ServerMain.java
+index 9428c35..0cf17c1 100644
+--- a/src/rath/tools/ftp/ServerMain.java
++++ b/src/rath/tools/ftp/ServerMain.java
+@@ -14,9 +14,11 @@ import java.util.Properties;
+  */
+ public class ServerMain
+ {
+-	public ServerMain()
+-	{
++	private String propertyFile;
+ 
++	public ServerMain(String propertyFile)
++	{
++		this.propertyFile = propertyFile;
+ 	}
+ 
+ 	@SuppressWarnings("unchecked")
+@@ -26,7 +28,7 @@ public class ServerMain
+ 		FileInputStream fis = null;
+ 		try
+ 		{
+-			fis = new FileInputStream("ftp.properties");
++			fis = new FileInputStream(propertyFile);
+ 			prop.load(fis);
+ 		}
+ 		finally
+@@ -48,7 +50,12 @@ public class ServerMain
+ 		out.println( ">>> Rath FTP Daemon <<<" );
+ 		out.println( ">>>-------------------<<<" );
+ 
+-		ServerMain sm = new ServerMain();
++		String propertyFile = "ftp.properties";
++		if (args.length > 0) {
++			propertyFile = args[0];
++		}
++
++		ServerMain sm = new ServerMain(propertyFile);
+ 
+ 		out.println( "* Load all configuration properties..." );
+ 		sm.loadProperties();
+-- 
+1.7.3.4
+

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: libs/aspectjrt.jar libs/CliSeAuRT.jar libs/server-sidechannel-Bucketing.jar libs/std-enforcers.jar libs/log4j.jar libs/jansi.jar
+Main-Class: serversidechannel.ServerStarter
+

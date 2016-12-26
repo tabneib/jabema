@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="Timing Side Channel Server" default="build">
+
+	<property name="src" value="src"/>
+	<property name="build" value="build"/>
+	<property name="jarFile" value="MacTSCServer.jar"/>
+
+	<target name="compile">
+		<mkdir dir="${build}"/>
+		<javac srcdir="${src}" destdir="${build}" debug="yes" />
+	</target>
+
+	<target name="build" depends="compile">
+		<jar jarfile="${jarFile}" basedir="${build}" manifest="Manifest.mf" compress="yes" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete file="${MainJar}"/>
+	</target>
+
+</project>
+
+

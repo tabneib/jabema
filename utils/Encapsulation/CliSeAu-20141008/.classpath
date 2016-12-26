@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tests/instances/src"/>
+	<classpathentry kind="src" path="tests/targets/SimpleFTPD/impl/src"/>
+	<classpathentry kind="src" path="tests/targets/TSCServer/impl/src"/>
+	<classpathentry kind="lib" path="build/ChineseWall.jar"/>
+	<classpathentry kind="lib" path="build/CliSeAuRT.jar"/>
+	<classpathentry kind="lib" path="build/encaps.jar"/>
+	<classpathentry kind="lib" path="build/FrequencyQuota.jar"/>
+	<classpathentry kind="lib" path="build/std-enforcers.jar"/>
+	<classpathentry kind="lib" path="build/VolumeQuota.jar"/>
+	<classpathentry kind="lib" path="libs/antlr.jar"/>
+	<classpathentry kind="lib" path="libs/aspectj1.6/lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="libs/aspectj1.6/lib/aspectjtools.jar"/>
+	<classpathentry kind="lib" path="libs/aspectj1.6/lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="libs/aspectj1.6/lib/org.aspectj.matcher.jar"/>
+	<classpathentry kind="lib" path="libs/commons-io.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang.jar"/>
+	<classpathentry kind="lib" path="libs/hamcrest-core.jar"/>
+	<classpathentry kind="lib" path="libs/jansi.jar"/>
+	<classpathentry kind="lib" path="libs/javacc.jar"/>
+	<classpathentry kind="lib" path="libs/junit.jar"/>
+	<classpathentry kind="lib" path="libs/log4j.jar"/>
+	<classpathentry kind="lib" path="libs/stringtemplate.jar"/>
+	<classpathentry kind="lib" path="tests/instances/build/SimpleFTPD-ChineseWall.jar"/>
+	<classpathentry kind="lib" path="tests/targets/SimpleFTPD/impl/rath-ftpd.jar"/>
+	<classpathentry kind="lib" path="tests/targets/TSCServer/impl/MacTSCServer.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="tests/targets/SimpleFTPD/impl/build"/>
+</classpath>

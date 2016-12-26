@@ -1,0 +1,17 @@
+The files in this directory are templates for the "stringtemplate"
+library.
+
+ - aspect code for AspectJ to weave into the target agents
+
+   JavaAspect.st
+   JavaAdvice.st
+
+ - aspect code for AspectJ in a modified variant of the implementation:
+   "full sequential inlining" (FSI)
+
+   JavaAdvice-FSI.st
+   JavaAspect-FSI.st
+
+ - template Java code for the node starter program
+
+   JavaStarter.st

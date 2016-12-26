@@ -1,0 +1,63 @@
+/*! @mainpage
+ * @authors Richard Gay
+ *
+ * This document describes the implementation of Service Automata, whose formal
+ * security model is introduced in the paper "Service Automata" by Richard Gay,
+ * Heiko Mantel, and Barbara Sprick, published in the proceedings of the 8th
+ * International Workshop on Formal Aspects of Security & Trust, 2011. The
+ * implementation consists of several parts:
+ *  - implementations and interface definitions of the Service Automata
+ *    components and data types,
+ *  - a tool for instantiating Service Automata for a given distributed target
+ *    system,
+ *  - test cases.
+ *
+ * @section Building Building the Tool
+ *
+ * @subsection Dependencies Dependencies and Prerequisites
+ *
+ * In order to compile and run the implementation, the following external
+ * libraries and tools are required:
+ *  - @em java (tested with icedtea 6.1.10.4)
+ *  - @em ant (tested with version 1.8.1)
+ *  - @em javadoc or @em doxygen (tested with version 1.7.3) for building this source code documentation 
+ *  - @em graphviz for generating inheritance graphs in the source code
+ *    documentation (tested with version 2.26.3)
+ *  - @em junit for building and running unit tests (tested with version 4.6)
+ *  - @em log4j for logging of information at least during the development phase
+ *    (tested with version 1.2.16)
+ *  - @em javacc for building a parser for pointcut specifications of Java
+ *    target programs (tested with version 4.0)
+ *  - @em stringtemplate for constructing AspectJ aspects for Java target
+ *    programs (tested with version 3.2)
+ *  - @em antlr as an apparent dependency of @em stringtemplate (tested with
+ *    version 2.7.7)
+ *  - @em aspectj (tested with version 1.6.12)
+ *    - download 'aspectj-&lt;version&gt;.jar'
+ *    - run 'java -jar aspectj-&lt;version&gt;.jar'
+ *    - follow the instruction of the GUI, specifying
+ *      the 'libs/' subdirectory as the installation path
+ *    
+ *
+ * @subsection Configuration Configuration
+ *
+ * - check the @em build.xml file in the root directory of the project and set
+ *   the correct paths to the libraries there
+ *
+ * @section Composer The Instantiation Tool: Service Automata Composer
+ *
+ * @todo document
+ *
+ * @section Components Service Automata Components
+ *
+ * @todo document
+ *
+ * @section Extension Extending the Implementation
+ *
+ * @todo Document how the implementation can be extended for further target
+ * hardware, operating systems, and programming languages
+ *
+ * @section License
+ *
+ * @todo add license text here!
+ */

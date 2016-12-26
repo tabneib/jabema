@@ -1,0 +1,12 @@
+
+import serversidechannel.Hash;
+
+/* class of the method, argument of the method, returned type */
+/*pointcut checkHash(Hash h, String hash > boolean):
+	call(boolean checkRequest(String))
+	&& target(h) && args(hash);
+*/ 
+
+pointcut checkRequest(Hash h, String request > boolean):
+	call(boolean checkRequest(String))
+	&& target(h) && args(request);
