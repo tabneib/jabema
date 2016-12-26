@@ -1,4 +1,7 @@
 #!/bin/bash
+# JaBeMa 1.0
+# author: nhd
+# chuhoangan@gmail.com
 start=$(date +%s.%N)
 
 

@@ -1,4 +1,7 @@
 #!/bin/bash
+# JaBeMa 1.0
+# author: nhd
+# chuhoangan@gmail.com
 
 #path_in="./results/obs/2016-11-24/"
 #path_out="./results/capacity/2016-11-24/"

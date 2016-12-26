@@ -1,4 +1,7 @@
 #!/bin/bash
+# JaBeMa 1.0
+# author: nhd
+# chuhoangan@gmail.com
 source `dirname $0`/configuration
 # Compute the average retTime for each kind of input
 

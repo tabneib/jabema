@@ -1,4 +1,7 @@
-
+#!/bin/python
+# JaBeMa 1.0
+# author: nhd
+# chuhoangan@gmail.com
 #Confidence intervals for the mean running time
 import math
 import numpy as np
