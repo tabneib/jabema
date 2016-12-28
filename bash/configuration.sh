@@ -20,7 +20,7 @@ date=`date +%Y-%m-%d`
 # --------------------------------> 
 
 #measurements=200000
-measurements=200000
+measurements=1000
 normalizationWindowSize=40
 smoothingWindowSize=100
 outlierFactor=2

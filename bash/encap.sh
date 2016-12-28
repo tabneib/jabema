@@ -7,7 +7,7 @@ source `dirname $0`/configuration
 cwd=`pwd`
 
 # Generate the CliSeAu configuration file
-./gen_cfg > Server-SideChannel/ServerSideChannel-Bucketing.cfg
+$path_to_bash'gen_cfg' > $path_to_utils_encapsulation'ServerSideChannel-Bucketing.cfg'
 
 build_server () {
 
@@ -15,7 +15,7 @@ build_server () {
 	# assume that we are in the Server-SideChannel directory
 	cd $path_to_impl'server'
 	ant
-	mv server-sidechannel.jar $path_to_utils_encapsulation'Server-SideChannel/target/'
+	mv server-sidechannel.jar $path_to_utils_encapsulation'target/'
 }
 
 build_enforcer () {
@@ -33,6 +33,7 @@ encapsulate () {
 	
 	cd $path_to_utils_encapsulation'CliSeAu-20141008'
 	echo -e "\n================= Encapsulating =================\n"
+	# build CliSeAu
 	ant
 	java -jar build/encaps.jar $path_to_utils_encapsulation'ServerSideChannel-Bucketing.cfg' tests/network-local.cfg
 }
@@ -51,6 +52,7 @@ if [ $# -eq 0 ]; then
 	build_server
 	build_enforcer
 	encapsulate
+	cd $cwd
 	
 
 else

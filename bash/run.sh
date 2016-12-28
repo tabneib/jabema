@@ -23,7 +23,7 @@ invoke_server_c () {
 	# $2: port
 	# $3: Id of the current sample
 	# java -Xmx2000m -cp ./de.tud.mais.hiwi.server/src serversidechannel.main "$1" "$2" "$path_output" "$measurements" "$3" &
-	java -Xmx2000m -jar "$path_to_build"encap-server/id-1/JavaStarter.jar "$1" "$2" "$path_output" "$measurements" "$3" &
+	java -Xmx2000m -jar "$path_to_build"encap-server/id-1/JavaStarter.jar "$1" "$2" "$path_to_tmp_output" "$measurements" "$3" &
 }
 
 invoke_client_i () {
@@ -81,13 +81,6 @@ invoke_client_c () {
 # compile the client and server source code 
 #javac ./de.tud.mais.hiwi.server/src/serversidechannel/*.java
 #javac ./de.tud.mais.hiwi.client/src/client/*.java
-
-# build the client and server
-cd $path_to_impl'client'
-ant
-cd $path_to_impl'server'
-ant
-
 
 
 if [ "$1" = "server" ]; then
